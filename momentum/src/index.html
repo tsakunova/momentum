@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <script src="https://kit.fontawesome.com/55ffda1190.js" crossorigin="anonymous"></script>
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"
+    rel="stylesheet">
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id='body'>
+  <div class="overlay">
+    <div id='audio-container'>
+      <audio></audio>
+      <div class="audio-player">
+        <div class="player">
+          <div class="prev-audio"><i class="fas fa-backward"></i></div>
+          <div class="play-audio"></div>
+          <div class="next-audio"><i class="fas fa-forward"></i></div>
+        </div>
+        <div class="duration">
+
+        </div>
+        <div class="audio-player-wrapper">
+          <input type="range" value="0" min="0" max="100" step="1" class="progress audio-progress">
+          <button id="mute"></button>
+          <input type="range" name="volume" min="0" max="1" step="0.05" value="0.4" class=" progress volume">
+        </div>
+        
+     
+      </div>
+      <div class="playlist-audio">
+
+      </div>
+    </div>
+    <div class="switch-theme">
+      <label id="switch" class="switch">
+        <input type="checkbox" id="slider">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div id="weather-container">
+      <div class="city" contenteditable="true"></div>
+      <div class="weather-loading"></div>
+      <i class="weather-icon owf-2x"></i>
+      <div class="temperature"></div>
+      <div class="weather-description"></div>
+      <div class="humidity"></div>
+      <div class="wind"></div>
+      <div class="weather-error"></div>
+    </div>
+    <div class="btn-background-left">
+      <div class="dws-bg">
+        <div class="pulse-bg">
+          <div class="bloc-bg"></div>
+          <div class="phone-bg"><i class="fas fa-arrow-left"></i></div>
+
+        </div>
+      </div>
+    </div>
+    <div class="btn-background-right">
+      <div class="dws-bg">
+        <div class="pulse-bg">
+          <div class="bloc-bg"></div>
+          <div class="phone-bg"><i class="fas fa-arrow-right"></i></div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="time-container"><time id="time"></time>
+
+      <div id="week"></div></div>
+      <h1 class="greet-container">
+        <span id="greeting"></span>
+        <span id="name" contenteditable="true"></span>
+      </h1>
+      <div class="focus-container">
+         <h2 id="day-focus"></h2>
+      <h2 id="focus" contenteditable="true"></h2>
+      </div>
+     
+
+    </div>
+    <figure class="quote">
+      <div class="btn-quote">
+        <div class="dws">
+          <div class="pulse">
+            <div class="bloc"></div>
+            <div class="phone"><i class="fas fa-redo"></i></i></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="quote-generate">
+        <blockquote></blockquote>
+        <figcaption></figcaption>
+      </div>
+
+    </figure>
+    <div class="setting">
+      <div class="pulse-bg">
+        <div class="bloc-bg"></div>
+        <div class="btn-setting phone-bg">
+        <i class="fas fa-cogs"></i>
+      </div>
+      </div>
+      
+    </div>
+    <div class="setting-menu">
+      <div>
+        <h3 class="lang">Language</h3>
+        <div>
+          <span id='en-setting'>English</span><span id='ru-setting'>Russian</span>
+        </div>
+        <h3 class="show-hide">Show/ Hide</h3>
+        <div class="set-check">
+          <input type="checkbox" name="time-setting" id="time-setting" checked="false"><label class="time-setting" for="time-setting">Time </label>
+          <input type="checkbox" name="greetings-setting" id="greetings-setting" ><label class="greetings-setting" for="greetings-setting">Greetings </label>
+          <input type="checkbox" name="focus-setting" id="focus-setting" ><label class="focus-setting" for="focus-setting">Focus </label>
+          <input type="checkbox" name="audio-setting" id="audio-setting" ><label class="audio-setting" for="audio-setting">Audio Player </label>
+          <input type="checkbox" name="weather-setting" id="weather-setting" ><label class="weather-setting" for="weather-setting">Weather </label>
+          <input type="checkbox" name="quotes-setting" id="quotes-setting"><label class="quotes-setting" for="quotes-setting">Quotes </label>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-container">
+        <ul class="footer-list">
+            <li><a href="https://github.com/tsakunova" target="_blank"><i class="fab fa-github-square"></i></a>
+            </li>
+            <li><time>2021</time></li>
+            <li><a href="https://rs.school/js/" target="_blank"><img src="https://rs.school/images/rs_school_js.svg" alt="rs-logo"></a></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+  <div class="preload-container"></div>
+</body>
+
+</html>
